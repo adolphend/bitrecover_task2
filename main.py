@@ -190,7 +190,7 @@ def main():
                              num_workers=args.num_workers)
     datatest = loadmat(args.test_data)
     testset = MatDataset(datatest, N)
-    testloader = DataLoader(trainset,
+    testloader = DataLoader(testset,
                             batch_size=args.batchsize,
                             shuffle=False,
                             num_workers=args.num_workers)
