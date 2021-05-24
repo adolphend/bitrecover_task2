@@ -43,7 +43,7 @@ def BER_est(x_in, x_ref):
 
 def loadmat(filename):
     data = {}
-    with h5py.File('Dataset1.mat', 'r') as f:
+    with h5py.File(filename, 'r') as f:
         for k, v in f.items():
             data[k] =  np.asarray(v)
     return data
